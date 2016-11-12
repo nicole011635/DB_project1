@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js 讓 IE8 支援 HTML5 元素與媒體查詢 -->
+    <!-- 警告：Respond.js 無法在 file:// 協定下運作 -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+ .nav-custom {
+ 	 height:50%; 	
+ 	 padding-right:100px;
+ 	 padding-left:100px;
+ }
+ .navbar-text li a{
+ 	padding: 20px;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ 	color:white;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	font-size: 20px;
+ }
+ .navbar-hover > ul > li > a:hover {
+    color: #00c79d;
+    background-color: #35445f;
+}
+ .navbar-brand > li > a:hover{
+	color: white;
+    background-color: #35445f;
+}
+.navbar-brand{
+	padding:0;
+}
+header{
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+header img{
+	width:20%;
+}
+.intro-text{
+	margin-top: 100px;
+ 	color:white;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	font-size: 80px;
+ 	font-weight: bold;
+ 	display: block;
+ 	padding-bottom: 0;
+}
+.name{
+ 	font-size: 20px;
+ 	font-weight: normal;
+}
+hr.star-light{
+    max-width: 250px;
+    border-top: solid 5px;
+    text-align: center;
+
+}
+.glyphicon-star{
+	font-size: 30px;
+	padding: 20px;
+	background-color: #00c79d;
+	top:-90px;
+}
+ body{
+ 	 background-color:#00c79d;
+ }
+ section{
+ 	background-color:white;
+ 	padding:100px; 
+ 	text-align: center;
+ }
+ .title{
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	font-size: 50px;
+ 	font-weight: bold;
+ 	display: block;
+ }
+ .col-md-4{
+ 	padding-bottom: 30px;
+ }
+  </style>
+  <body>
+  		<div class="row nav-custom " style="background-color: #35445f;">
+	  		<div class="nav navbar-text navbar-brand ">		
+	  			<li role="presentation"><a href="#" ><strong>START BOOTSTRAP</strong></a></li>
+	  		</div>
+  			<nav class="navbar-right navbar-text navbar-hover" >
+  				<ul class="nav nav-pills">  				  
+				  <li role="presentation" ><a href="#">Home</a></li>
+				  <li role="presentation" ><a href="#profile">Profile</a></li>
+				  <li role="presentation"><a href="#">Messages</a></li>
+				</ul>
+  			</nav>
+  		</div>
+<header>
+<div class="container-fluid">
+	<div class="row">
+		
+		<div class="col-md-12">
+			<img src="shoppingCart.png" class="img-responsive img-circle center-block" alt="Responsive image">
+		</div>
+
+		<div class="intro-text">
+			<div>HELLO, WORLD!</div>
+			<hr class="star-light"></hr>
+			<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+			<div class="name">Web Desinger</div>
+		</div>
+	</div>
+</div>
+</header>
+    <section>
+    	<div class="container-fluid" id="profile">
+    		<div class="row">
+    			<div class="title">PROFOLIO</div>
+    			<hr class="star-light"></hr>
+    			
+    		</div>
+    		<div class="row">
+    			<div class="col-md-4">
+    			<img src="img/cabin.png" class="img-responsive" alt="">
+    			</div> 
+    			<div class="col-md-4">
+    			<img src="img/cake.png" class="img-responsive" alt="">
+    			</div>
+    			<div class="col-md-4">
+    			<img src="img/circus.png" class="img-responsive" alt="">
+    			</div>
+    			<div class="col-md-4">
+    			<img src="img/game.png" class="img-responsive" alt="">
+    			</div>
+    			<div class="col-md-4">
+    			<img src="img/safe.png" class="img-responsive" alt="">
+    			</div><div class="col-md-4">
+    			<img src="img/submarine.png" class="img-responsive" alt="">
+    			</div>
+
+
+
+
+    			
+    		</div>
+    	</div>
+
+    	</div>
+    </section>
+
+    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

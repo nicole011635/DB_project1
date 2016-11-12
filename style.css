@@ -1,0 +1,151 @@
+.nav-custom {
+ 	 height:50%; 	
+ 	 padding-right:100px;
+ 	 padding-left:100px;
+ 	 font-family: Microsoft YaHei;
+ }
+ .navbar-text li a{
+ 	padding: 20px;
+ 	padding-left: 20px;
+ 	padding-right: 20px;
+ 	color:white;
+ 	font-family: 'Source Sans Pro', sans-serif;
+ 	font-size: 20px;
+ }
+ .navbar-hover > ul > li > a:hover {
+    color: #00c79d;
+    background-color: #35445f;
+}
+ .navbar-brand > li > a:hover{
+	color: white;
+    background-color: #35445f;
+}
+.navbar-brand{
+	line-height:50px;
+	padding:0;
+	color: white;
+	font-size: 30px;
+	font-family: Microsoft YaHei;
+	float:left;
+}
+header{
+	box-shadow: 0px 5px 3px grey;
+	background:-moz-linear-gradient( center top, #ffb061 12%, #f07427 93% );
+	background:-ms-linear-gradient( top, #ffb061 12%, #f07427 93% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffb061', endColorstr='#f07427');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(12%, #ffb061), color-stop(93%, #f07427) );
+	background-color:#ffb061;
+	color:#ffffff;
+}
+header img{
+	width:20%;
+}
+ body{
+ 	font-family: Microsoft JhengHei; 	
+ }
+ .home{
+	line-height:50px;
+	padding:0;
+	color: white;
+	font-size: 30px;
+	font-family: Microsoft YaHei;
+	float:left;
+	padding-left:60px;
+}
+.icon{
+	float:left; 
+	position:absolute; 
+	top:0; 
+	bottom:0;
+	margin:auto;
+}
+.login{
+	background-color: #DAE6F5;
+	border-radius: 8px;
+	text-align: center;
+	margin-top: 10%;
+	padding: 15px;
+	font-size: 30px;
+	line-height: 30px;
+}
+.typein{
+	margin: 20px;
+}
+.butn{
+	background-color:#223D7A;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+.butn-del{
+	background-color:#910000;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+.butn:hover {
+    background-color: #13244D; 
+    color: white;
+}
+.navbar-hover > ul > li > a:hover {
+    color: white;
+    background-color:  #E88420;
+    font-family: Microsoft YaHei;
+}
+.nav>li>a:focus{
+	color: white;
+    background-color:  #E88420;
+    font-family: Microsoft YaHei;
+}
+.navbar-text li a{
+	font-family: Microsoft YaHei;
+	float:bottom;
+}
+#sidebar{
+	padding: 0px;
+	text-align: center;
+	height: 100%;
+}
+ul.side {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #733400;
+    font-size: 20px;
+}
+a:focus, a:hover{
+	text-decoration: none;
+	background-color: #733400;
+    color: white;
+    font-size: 25px;
+}
+li a {
+    display: block;
+    color: white;
+    padding: 10px 50px;
+}
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+ }
+.content{
+	padding:50px;
+	font-size: 30px;
+}
+table{
+	 text-align: center;
+	 margin-top: 20px;
+	 box-shadow: 3px 3px 3px grey;
+}
+.inputbar{
+	 text-align: center;
+}
+caption{
+	text-align: center;
+	color:black;
+}
+p{
+	text-align: center;
+}

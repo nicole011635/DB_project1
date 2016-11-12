@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>線上點名系統</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+//網頁剛載入時不會顯示顏色狀態
+      var i=0;
+       $('#inputbtn').click(function() {
+        var t = $('#table tr:eq(0) td:eq(1)').text().length;
+         while(t){        
+          if(t==2){
+            $('#table tr:eq('+i+') td:eq(1)').css('color', 'green');
+          }
+          else if(t==3){
+            $('#table tr:eq('+i+') td:eq(1)').css('color', 'red');
+          }
+          i++;
+          var t = $('#table tr:eq('+i+') td:eq(1)').text().length;
+        }
+        return;});
+
+    });
+
+
+    </script>
+
+
+  </head>
+  <body>
+
+  <header>
+  		<div class="row nav-custom ">
+	  		<div class="nav navbar-text navbar-brand" style="position:relative;">
+         <img class="icon" src="img/books.png">
+         <div class="home">線上點名系統</div>
+	  		</div>
+        <nav class="navbar-right navbar-text navbar-hover" >
+          <ul class="nav nav-pills">            
+          <li class="nav-tag"><a href="#">點名</a></li>
+          <li class="nav-tag"><a href="#profile">訊息</a></li>
+          <li class="nav-tag"><a href="#">管理</a></li>
+        </ul>
+        </nav>
+      </div>
+  		</div>
+
+  </header>
+  
+<div class="container-fluid">
+	<div class="row">
+
+  <div class="col-md-2 " id="sidebar">
+      <ul class="side">
+        <li><a href="#home">點名</a></li>
+        <li><a href="#news">班級查詢</a></li>
+        <li><a href="#contact">學生查詢</a></li>
+      </ul>
+  </div>
+
+		<div class="col-md-10 ">
+      <div class="content">
+      <div class="inputbar">輸入學生姓名 :
+        <input type="text" >
+        <button id="inputbtn"class="btn btn-default butn">確定</button>
+      </div>
+      <div>
+      <!--以下要有值才會顯示-->
+      <hr>
+      <table id="table" class="table table-striped">
+        <caption class="top">xxx 同學</caption>
+        <tr>
+          <td>11/11 高三 物理A</td>
+          <td>出席</td>
+        </tr>
+        <tr>
+          <td>11/09 高三 數學A</td>
+          <td>未出席</td>
+        </tr>
+         <tr>
+          <td>11/04 高三 物理A</td>
+          <td>出席</td>
+        </tr>
+        <tr>
+          <td>11/02 高三 數學A</td>
+          <td>未出席</td>
+        </tr>
+      </table>
+        </div>
+      </div>
+		</div>
+
+</div>
+
+<footer>
+<hr>
+<div>
+<p>補習班</p>
+<p>高雄分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
+<p>台北分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
+
+
+</div>
+  
+
+
+</footer>
+
+
+    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
