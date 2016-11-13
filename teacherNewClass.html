@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>線上點名系統</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+     $("#newclasstime").click(function(){
+        $("#table1").append("<tr><td colspan='3'>上課時間 : <select name='day'><option value=''>週一</option><option value=''>週二</option><option value=''>週三</option><option value=''>週四</option><option value=''>週五</option><option value=''>週六</option><option value=''>週日</option></select> <select name='starttime'><option value=''>0000</option><option value=''>0100</option></select> ~ <select name='endtime'><option value=''>0000</option><option value=''>0100</option></select></td></tr>");//如果尼不幸要修改這邊，不要enter空行會壞掉嗚嗚嗚
+      })
+    });
+
+
+    </script>
+
+
+  </head>
+  <body>
+
+  <header>
+  		<div class="row nav-custom ">
+	  		<div class="nav navbar-text navbar-brand" style="position:relative;">
+         <img class="icon" src="img/books.png">
+         <div class="home">線上點名系統</div>
+	  		</div>
+        <nav class="navbar-right navbar-text navbar-hover" >
+          <ul class="nav nav-pills">            
+            <li class="nav-tag"><a href="teacherMain.html">點名</a></li>
+            <li class="nav-tag"><a href="teacherMessage.html">訊息</a></li>
+            <li class="nav-tag"><a href="teacherManageClass.html">管理</a></li>
+          </ul>
+        </nav>
+      </div>
+  		</div>
+
+  </header>
+  
+<div class="container-fluid">
+	<div class="row">
+
+  <div class="col-md-2 " id="sidebar">
+      <ul class="side">
+        <li><a href="teacherManageClass.html">課程管理</a></li>
+        <li><a href="teacherNewClass.html">新增課程</a></li>
+        <li><a href="teacherManageStaff.html">人員管理</a></li>
+        <li><a href="teacherManageVideo.html">影片管理</a></li>
+      </ul>
+  </div>
+
+		<div class="col-md-10 ">
+      <div class="content">
+        <div>
+          <form action="teacherShowNewClass.html">
+          <table id="table1" class="table table-striped">
+            <tr>
+              <td colspan="3">課程名稱</td>
+            </tr>
+             <tr>
+              <td>年級 : 
+                <select name="grade">
+                 <option>年級</option>
+                 <option value="">文字敘述2</option>
+                 <option value="">文字敘述3</option>
+                 <option value="">文字敘述4</option>
+                </select>
+              </td>
+              <td>科目 :
+                <select name="subject">
+                 <option>科目</option>
+                 <option value="">文字敘述2</option>
+                 <option value="">文字敘述3</option>
+                 <option value="">文字敘述4</option>
+                </select>
+              </td>
+              <td>班級 :
+                <select name="class">
+                 <option>班級</option>
+                 <option value="">文字敘述2</option>
+                 <option value="">文字敘述3</option>
+                 <option value="">文字敘述4</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>講師 :</td>
+              <td colspan="2"><input type="text" name="lectuer"></td>
+            </tr>
+            <tr>
+              <td>導師 :</td>
+              <td colspan="2"><input type="text" name="mentor"></td>
+            </tr>
+            <tr>
+              <td>地點</td>
+              <td>分校 :
+                <select name="school">
+                 <option>班級</option>
+                 <option value="">文字敘述2</option>
+                 <option value="">文字敘述3</option>
+                 <option value="">文字敘述4</option>
+                </select>
+              </td>
+              <td>教室 :
+                <select name="classroom">
+                 <option>班級</option>
+                 <option value="">文字敘述2</option>
+                 <option value="">文字敘述3</option>
+                 <option value="">文字敘述4</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan='3'>上課時間 :
+                <select name='day'>
+                 <option value=''>週一</option>
+                 <option value=''>週二</option>
+                 <option value=''>週三</option>
+                 <option value=''>週四</option>
+                 <option value=''>週五</option>
+                 <option value=''>週六</option>
+                 <option value=''>週日</option>
+                </select>
+
+                <select name='time'>
+                 <option value=''>0000</option>
+                 <option value=''>0100</option>
+                </select>
+                 ~
+                <select name='time'>
+                 <option value=''>0000</option>
+                 <option value=''>0100</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3"><button type="button" id="newclasstime">新增</button></td>
+            </tr>
+          </table>
+          <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button>
+          </form>
+        </div>
+      </div>
+		</div>
+
+</div>
+
+<footer>
+<hr>
+<div>
+<p>補習班</p>
+<p>高雄分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
+<p>台北分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
+</div>
+</footer>
+
+
+    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
+    
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

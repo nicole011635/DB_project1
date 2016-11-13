@@ -47,9 +47,8 @@
 	  		</div>
         <nav class="navbar-right navbar-text navbar-hover" >
           <ul class="nav nav-pills">            
-          <li class="nav-tag"><a href="teacherMain.html">點名</a></li>
-          <li class="nav-tag"><a href="teacherMessage.html">訊息</a></li>
-          <li class="nav-tag"><a href="teacherManage.html">管理</a></li>
+          <li class="nav-tag"><a href="studentMain.html">首頁</a></li>
+          <li class="nav-tag"><a href="studentInfo.html">個人資料</a></li>
         </ul>
         </nav>
       </div>
@@ -62,58 +61,68 @@
 
   <div class="col-md-2 " id="sidebar">
       <ul class="side">
-        <li><a href="teacherMain.html">點名</a></li>
-        <li><a href="teacherClass.html">班級查詢</a></li>
-        <li><a href="teacherSingleStu.html">學生查詢</a></li>
+        <li><a href="studentMain.html">學生首頁</a></li>
+        <li><a href="studentMessage.html">聯絡簿</a></li>
+        <li><a href="studentVideo.html">補課</a></li>
       </ul>
   </div>
 
 		<div class="col-md-10 ">
       <div class="content">
+      <form action="studentInfo.html">
       <div>
-        <form action="#">
-        <table id="table" class="table table-striped">
-          <caption class="top">11/11 三年級物理A</caption>
+        <table id="table" class="table">
           <tr>
-            <td>同學1</td>
-            <td>
-              <input type="radio" name="stu1" value="出席">出席
-              <input type="radio" name="stu1" value="未出席">未出席
-              <input type="radio" name="stu1" value="早退">早退
-            </td>
+            <td colspan="2" class="td-title">同學1</td>
           </tr>
           <tr>
-            <td>同學2</td>
-            <td>
-              <input type="radio" name="stu2" value="出席">出席
-              <input type="radio" name="stu2" value="未出席">未出席
-              <input type="radio" name="stu2" value="早退">早退
-            </td>
-          </tr>
-           <tr>
-            <td>同學3</td>
-            <td>
-              <input type="radio" name="stu3" value="出席">出席
-              <input type="radio" name="stu3" value="未出席">未出席
-              <input type="radio" name="stu3" value="早退">早退
-            </td>
+            <td style="background-color:#c2d6f2;">帳號</td>
+            <td><input type="text" value="A001"></td>
           </tr>
           <tr>
-            <td>同學4</td>
-            <td>
-              <input type="radio" name="stu4" value="出席">出席
-              <input type="radio" name="stu4" value="未出席">未出席
-              <input type="radio" name="stu4" value="早退">早退
-            </td>
+            <td style="background-color:#c2d6f2;">密碼</td>
+            <td><input type="text" value="1234"></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">性別</td>
+            <td><input type="text" value="無"></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">學校</td>
+            <td><input type="text" value="123國中"></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">年級</td>
+            <td><input type="text" value="三年級"></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">電話</td>
+            <td><input type="text" value="0912-345-678"></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">地址</td>
+            <td><input type="text" value="高雄市蓮海路"></td>
+          </tr>
+        </table>  
+
+        <table class="table"><!--家長有兩個就印兩坨-->
+          <tr>
+            <td colspan="2" class="td-title">家長</td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">姓名</td>
+            <td><input type="text" value="三yee"></td>
+          </tr>
+          <tr>
+            <td style="background-color:#c2d6f2;">電話</td>
+            <td><input type="text" value="0987-654-321"></td>
           </tr>
         </table>
-      
-        <button class="btn btn-default butn" style="margin-left:45%;">結束點名</button>
-        </form>
-     </div>
       </div>
-		</div>
-
+      <div>
+        <button type="submit" class="btn btn-default butn" style="margin-left:45%;">確定</button> 
+		  </div>
+      </form>
 </div>
 
 <footer>

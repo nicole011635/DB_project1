@@ -14,7 +14,7 @@
 
     <script type="text/javascript">
     $(document).ready(function(){
-//網頁剛載入時不會顯示顏色狀態
+//裝死ing
       var i=0;
        $('#inputbtn').click(function() {
         var t = $('#table tr:eq(0) td:eq(1)').text().length;
@@ -29,6 +29,7 @@
           var t = $('#table tr:eq('+i+') td:eq(1)').text().length;
         }
         return;});
+
 
     });
 
@@ -47,9 +48,8 @@
 	  		</div>
         <nav class="navbar-right navbar-text navbar-hover" >
           <ul class="nav nav-pills">            
-          <li class="nav-tag"><a href="teacherMain.html">點名</a></li>
-          <li class="nav-tag"><a href="teacherMessage.html">訊息</a></li>
-          <li class="nav-tag"><a href="teacherManageClass.html">管理</a></li>
+          <li class="nav-tag"><a href="studentMain.html">首頁</a></li>
+          <li class="nav-tag"><a href="studentInfo.html">個人資料</a></li>
         </ul>
         </nav>
       </div>
@@ -62,41 +62,68 @@
 
   <div class="col-md-2 " id="sidebar">
       <ul class="side">
-        <li><a href="teacherMessage.html">聯絡簿</a></li>
-        <li><a href="teacherClassMakeup.html">班級補課</a></li>
-        <li><a href="teacherStuMakeup.html">學生補課</a></li>
+        <li><a href="studentMain.html">學生首頁</a></li>
+        <li><a href="studentMessage.html">聯絡簿</a></li>
+        <li><a href="studentVideo.html">補課</a></li>
       </ul>
   </div>
 
 		<div class="col-md-10 ">
       <div class="content">
-        <div class="inputbar">輸入學生姓名 :
-        <form action="#">
-          <input type="text" >
-          <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button>
-        </form>
-        </div>
-        <div>
-        <!--以下資料庫要有值才會顯示-->
-          <hr>
-          <caption class="top">同學1 補課紀錄 : </caption>
-          <table id="table" class="table table-striped">  
-            <caption><strong>未補課</strong></caption>
-            <tr>
-              <td>11/11 高三物理A</td>
-            </tr>
-             <tr>
-              <td>11/09 高三數學A</td>
-            </tr>
-          </table>
-          <table id="table" class="table table-striped">  
-            <caption><strong>已補課</strong></caption>
-            <tr>
-              <td>11/04 高三物理A</td>
-            </tr>
-            </tr>
-          </table>
-        </div>
+      <div>
+      <caption class="top">同學1 出席與補課紀錄</caption>
+        <table id="table" class="table table-striped">
+          <caption class="top">高三物理A</caption>
+          <tr>
+            <td><strong>日期</strong></td>
+            <td><strong>是否出席</strong></td>
+            <td><strong>補課狀況</strong></td>
+          </tr>
+          <tr>
+            <td>11/11</td>
+            <td>出席</td>
+            <td></td>
+          </tr>
+           <tr>
+            <td>11/04</td>
+            <td>出席</td>
+            <td></td>
+        </table>
+       <table id="table" class="table table-striped">
+          <caption class="top">高三數學A</caption>
+          <tr>
+            <td><strong>日期</strong></td>
+            <td><strong>是否出席</strong></td>
+            <td><strong>補課狀況</strong></td>
+          </tr>
+          <tr>
+            <td>11/09</td>
+            <td>未出席</td>
+            <td>未補課</td>
+          </tr>
+           <tr>
+            <td>11/02</td>
+            <td>出席</td>
+            <td></td>
+        </table>
+        <table id="table" class="table table-striped">
+          <caption class="top">高三英文A</caption>
+          <tr>
+            <td><strong>日期</strong></td>
+            <td><strong>是否出席</strong></td>
+            <td><strong>補課狀況</strong></td>
+          </tr>
+          <tr>
+            <td>11/10</td>
+            <td>未出席</td>
+            <td>已補課</td>
+          </tr>
+           <tr>
+            <td>11/03</td>
+            <td>出席</td>
+            <td></td>
+        </table>
+     </div>
       </div>
 		</div>
 

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>線上點名系統</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      $("#newstu").click(function(){
+        $("#table").append("<tr><td colspan='2'>姓名 :<input type='text'></td><td >課程 :<select><option>高三物理A</option><option>高三數學A</option><option>高三英文A</option></select></td><td colspan='3'>電話 :<input type='text'></td></tr>");
+      });
+
+    });
+
+
+    </script>
+
+
+  </head>
+  <body>
+
+  <header>
+  		<div class="row nav-custom ">
+	  		<div class="nav navbar-text navbar-brand" style="position:relative;">
+         <img class="icon" src="img/books.png">
+         <div class="home">線上點名系統</div>
+	  		</div>
+        <nav class="navbar-right navbar-text navbar-hover" >
+          <ul class="nav nav-pills">            
+          <li class="nav-tag"><a href="teacherMain.html">點名</a></li>
+          <li class="nav-tag"><a href="teacherMessage.html">訊息</a></li>
+          <li class="nav-tag"><a href="teacherManageClass.html">管理</a></li>
+        </ul>
+        </nav>
+      </div>
+  		</div>
+
+  </header>
+  
+<div class="container-fluid">
+	<div class="row">
+
+  <div class="col-md-2 " id="sidebar">
+      <ul class="side">
+        <li><a href="teacherManageClass.html">課程管理</a></li>
+        <li><a href="teacherNewClass.html">新增課程</a></li>
+        <li><a href="teacherManageStaff.html">人員管理</a></li>
+        <li><a href="teacherManageVideo.html">影片管理</a></li>
+      </ul>
+  </div>
+
+		<div class="col-md-10 ">
+      <div class="content">
+        <form action="#">
+        <div class="inputbar">選擇 :
+          <select id="classname"><!--只能列出全體名單，管理區只負責人員增刪，課程名單要去點名單看-->
+           <option>學生</option>
+           <option>老師</option>
+          </select><!--選腦斯的話要跳去teacherManageStaff(t)ㄛ-->
+          <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button> 
+      </div>
+      </form>
+        <div class="fontsmaller">
+        <!--以下要有值才會顯示-->
+        <form action="#">
+          <hr>
+          <table id="table" class="table table-striped">
+            <caption class="top">學生名單</caption>
+            <tr>
+              <td>ID</td>
+              <td>姓名</td>
+              <td>課程</td>
+              <td>電話</td>
+              <td>詳細資訊</td>
+              <td>刪除</td>
+            </tr>
+            <tr>
+              <td>A001</td>
+              <td>同學1</td>
+              <td>高三物理A, 高三數學A</td>
+              <td>0912-345-678</td>
+              <td>
+                <form action="studentInfo.html">
+                <button type="submit" id="inputbtn"class="btn btn-default butn">詳細資訊</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
+              <td>
+                <form action="studentInfo.html">
+                <button type="submit" id="inputbtn"class="btn btn-default butn-del">刪除</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
+            </tr>  
+            <tr>
+              <td>A001</td>
+              <td>同學1</td>
+              <td>高三物理A, 高三數學A</td>
+              <td>0912-345-678</td>
+              <td>
+                <form action="studentInfo.html">
+                <button type="submit" id="inputbtn"class="btn btn-default butn">詳細資訊</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
+              <td>
+                <form action="studentInfo.html">
+                <button type="submit" id="inputbtn"class="btn btn-default butn-del">刪除</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
+            </tr>  
+            <tr>
+              <td>A001</td>
+              <td>同學1</td>
+              <td>高三物理A, 高三數學A</td>
+              <td>0912-345-678</td>
+              <td>
+                <form action="studentInfo.html">
+                <button type="submit" id="inputbtn"class="btn btn-default butn">詳細資訊</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
+              <td>
+                <form action="#">
+                <button type="submit" id="inputbtn"class="btn btn-default butn-del">刪除</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
+            </tr>      
+          </table>
+          <button id="newstu" class="btn btn-default">十</button><!--ID自動產生-->
+          <hr>
+           <button type="submit" class="btn btn-default butn">確定</button><!--送粗後給新學生ID並於列表顯示-->
+          </form>
+        </div>
+      </div>
+		</div>
+
+</div>
+
+<footer>
+<hr>
+<div>
+<p>補習班</p>
+<p>高雄分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
+<p>台北分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
+</div>
+</footer>
+
+    
+    <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

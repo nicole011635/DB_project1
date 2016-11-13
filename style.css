@@ -83,6 +83,18 @@ header img{
 	font-size: 20px;
 	text-align: center;
 }
+.butn-update{
+	background-color:#223D7A;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+.butn-update:hover {
+    background-color: #13244D; 
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
 .butn:hover {
     background-color: #13244D; 
     color: white;
@@ -148,4 +160,39 @@ caption{
 }
 p{
 	text-align: center;
+}
+.td-title{
+	background-color:#1153b0;
+	color:white;
+}
+iframe{
+	text-align: center;
+	width:840px; 
+	height:473px;
+}
+.mesg{
+	background-color: #1153b0;
+	color:white;
+	margin-top: 25px;
+	box-shadow: 3px 3px 3px grey;
+	padding-top: 10px;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 3px;
+}
+.mesg-con{
+	background-color: white;
+	color:black;
+}
+p.date{
+	text-align: right;
+	font-size: 20px;
+}
+p.name{
+	text-align: left;
+	font-size: 25px;
+	float: left;
+}
+.fontsmaller{
+	font-size: 20px;
 }

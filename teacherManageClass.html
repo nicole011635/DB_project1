@@ -14,21 +14,6 @@
 
     <script type="text/javascript">
     $(document).ready(function(){
-//網頁剛載入時不會顯示顏色狀態
-      var i=0;
-       $('#inputbtn').click(function() {
-        var t = $('#table tr:eq(0) td:eq(1)').text().length;
-         while(t){        
-          if(t==2){
-            $('#table tr:eq('+i+') td:eq(1)').css('color', 'green');
-          }
-          else if(t==3){
-            $('#table tr:eq('+i+') td:eq(1)').css('color', 'red');
-          }
-          i++;
-          var t = $('#table tr:eq('+i+') td:eq(1)').text().length;
-        }
-        return;});
 
     });
 
@@ -62,40 +47,71 @@
 
   <div class="col-md-2 " id="sidebar">
       <ul class="side">
-        <li><a href="teacherMessage.html">聯絡簿</a></li>
-        <li><a href="teacherClassMakeup.html">班級補課</a></li>
-        <li><a href="teacherStuMakeup.html">學生補課</a></li>
+        <li><a href="teacherManageClass.html">課程管理</a></li>
+        <li><a href="teacherNewClass.html">新增課程</a></li>
+        <li><a href="teacherManageStaff.html">人員管理</a></li>
+        <li><a href="teacherManageVideo.html">影片管理</a></li>
       </ul>
   </div>
 
 		<div class="col-md-10 ">
       <div class="content">
-        <div class="inputbar">輸入學生姓名 :
-        <form action="#">
-          <input type="text" >
+        <div class="inputbar">查詢班級 :
+          <select id="classname">
+           <option>課程名稱</option>
+           <option>文字敘述2</option>
+           <option>文字敘述3</option>
+           <option>文字敘述4</option>
+          </select>
           <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button>
-        </form>
-        </div>
+      </div>
         <div>
-        <!--以下資料庫要有值才會顯示-->
+        <!--以下要有值才會顯示-->
           <hr>
-          <caption class="top">同學1 補課紀錄 : </caption>
-          <table id="table" class="table table-striped">  
-            <caption><strong>未補課</strong></caption>
+          <form action="teacherManageClassUpdate.html">
+          <table class="table table-striped">
             <tr>
-              <td>11/11 高三物理A</td>
+              <td>課程名稱 :</td>
+              <td colspan="2">高三物理A</td>
             </tr>
-             <tr>
-              <td>11/09 高三數學A</td>
+            <tr>
+              <td>講師 :</td>
+              <td colspan="2">?????</td>
+            </tr>
+            <tr>
+              <td>導師 :</td>
+              <td colspan="2">黃三yee</td>
+            </tr>
+            <tr>
+              <td>地點</td>
+              <td>分校 : 高雄</td>
+              <td>教室 : 4069</td>
+            </tr>
+            <tr>
+              <td colspan="3">上課時間 : 週一 18:00~21:00</td>
             </tr>
           </table>
-          <table id="table" class="table table-striped">  
-            <caption><strong>已補課</strong></caption>
+          <table id="table" class="table table-striped">
+            <caption class="top">學生名單</caption>
             <tr>
-              <td>11/04 高三物理A</td>
+              <td>ID</td>
+              <td>姓名</td>
             </tr>
+            <tr>
+              <td>A001</td>
+              <td>同學1</td>
             </tr>
+            <tr>
+              <td>A001</td>
+              <td>同學1</td>
+            </tr>
+            <tr>
+              <td>A001</td>
+              <td>同學1</td>
+            </tr>             
           </table>
+          <button type="submit" id="inputbtn"class="btn btn-default butn">編輯</button>
+          </form>
         </div>
       </div>
 		</div>

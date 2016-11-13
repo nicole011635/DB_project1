@@ -14,21 +14,11 @@
 
     <script type="text/javascript">
     $(document).ready(function(){
-//網頁剛載入時不會顯示顏色狀態
-      var i=0;
-       $('#inputbtn').click(function() {
-        var t = $('#table tr:eq(0) td:eq(1)').text().length;
-         while(t){        
-          if(t==2){
-            $('#table tr:eq('+i+') td:eq(1)').css('color', 'green');
-          }
-          else if(t==3){
-            $('#table tr:eq('+i+') td:eq(1)').css('color', 'red');
-          }
-          i++;
-          var t = $('#table tr:eq('+i+') td:eq(1)').text().length;
-        }
-        return;});
+
+       $("#new").click(function(){
+        $("#table").append("<tr><td>日期 :<input type='text'></td><td colspan='2'>連結 : <input type='text'></td></tr>");
+      });
+
 
     });
 
@@ -62,42 +52,60 @@
 
   <div class="col-md-2 " id="sidebar">
       <ul class="side">
-        <li><a href="teacherMain.html">點名</a></li>
-        <li><a href="teacherClass.html">班級查詢</a></li>
-        <li><a href="teacherSingleStu.html">學生查詢</a></li>
+        <li><a href="teacherManageClass.html">課程管理</a></li>
+        <li><a href="teacherNewClass.html">新增課程</a></li>
+        <li><a href="teacherManageStaff.html">人員管理</a></li>
+        <li><a href="teacherManageVideo.html">影片管理</a></li>
       </ul>
   </div>
 
 		<div class="col-md-10 ">
       <div class="content">
         <form action="#">
-        <div class="inputbar">輸入學生姓名 :
-          <input type="text" >
-          <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button>
-        </div>
-        </form>
-        <div>
+        <div class="inputbar">選擇課程 :
+          <select id="classname"><!--列出所有課程-->
+           <option>高三物理A</option>
+           <option>高三數學A</option>
+          </select>
+          <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button> 
+      </div>
+      </form>
+        <div class="fontsmaller">
         <!--以下要有值才會顯示-->
+        <form action="teacherManageVideo.html">
           <hr>
           <table id="table" class="table table-striped">
-            <caption class="top">xxx 同學</caption>
+            <caption class="top">高三物理A</caption>
             <tr>
-              <td>11/11 高三 物理A</td>
-              <td>出席</td>
+              <td>日期</td>
+              <td>連結</td>
+              <td>刪除</td>
             </tr>
             <tr>
-              <td>11/09 高三 數學A</td>
-              <td>未出席</td>
-            </tr>
-             <tr>
-              <td>11/04 高三 物理A</td>
-              <td>出席</td>
+              <td>11/11</td>
+              <td>https://www.youtube.com/watch?v=VSymwIZX37o&list=PLhwIaK7pvoQcMjf6j9hLX4N6wJqyORr4J&index=31</td>
+              <td>
+                <form action="#">
+                <button type="submit" id="inputbtn"class="btn btn-default butn-del">刪除</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
             </tr>
             <tr>
-              <td>11/02 高三 數學A</td>
-              <td>未出席</td>
+              <td>11/04</td>
+              <td>https://www.youtube.com/watch?v=VSymwIZX37o&list=PLhwIaK7pvoQcMjf6j9hLX4N6wJqyORr4J&index=31</td>
+              <td>
+                <form action="#">
+                <button type="submit" id="inputbtn"class="btn btn-default butn-del">刪除</button> 
+                <input type="hidden" name="" value="">
+                </form>
+              </td>
             </tr>
           </table>
+            <button id="new" class="btn btn-default">十</button><!--見鬼拉拉拉不是submit也沒有<a>跳轉個毛QQQ不要按QQ-->
+          <hr>
+           <button type="submit" class="btn btn-default butn">確定</button>
+          </form>
         </div>
       </div>
 		</div>
@@ -110,16 +118,9 @@
 <p>補習班</p>
 <p>高雄分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
 <p>台北分校  地址 : ~~~~~~~~~~~~~~~~~  連絡電話 : 07-1234-567</p>
-
-
 </div>
-  
-
-
 </footer>
 
-
-    <!-- jQuery (Bootstrap 所有外掛均需要使用) -->
     
     <!-- 依需要參考已編譯外掛版本（如下），或各自獨立的外掛版本 -->
     <script src="js/bootstrap.min.js"></script>

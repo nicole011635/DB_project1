@@ -40,65 +40,64 @@
   <body>
 
   <header>
-  		<div class="row nav-custom ">
-	  		<div class="nav navbar-text navbar-brand" style="position:relative;">
+      <div class="row nav-custom ">
+        <div class="nav navbar-text navbar-brand" style="position:relative;">
          <img class="icon" src="img/books.png">
          <div class="home">線上點名系統</div>
-	  		</div>
+        </div>
         <nav class="navbar-right navbar-text navbar-hover" >
           <ul class="nav nav-pills">            
-          <li class="nav-tag"><a href="teacherMain.html">點名</a></li>
-          <li class="nav-tag"><a href="teacherMessage.html">訊息</a></li>
-          <li class="nav-tag"><a href="teacherManageClass.html">管理</a></li>
+          <li class="nav-tag"><a href="studentMain.html">首頁</a></li>
+          <li class="nav-tag"><a href="studentInfo.html">個人資料</a></li>
         </ul>
         </nav>
       </div>
-  		</div>
+      </div>
 
   </header>
   
 <div class="container-fluid">
-	<div class="row">
+  <div class="row">
 
   <div class="col-md-2 " id="sidebar">
       <ul class="side">
-        <li><a href="teacherMessage.html">聯絡簿</a></li>
-        <li><a href="teacherClassMakeup.html">班級補課</a></li>
-        <li><a href="teacherStuMakeup.html">學生補課</a></li>
+        <li><a href="studentMain.html">學生首頁</a></li>
+        <li><a href="studentMessage.html">聯絡簿</a></li>
+        <li><a href="studentVideo.html">補課</a></li>
       </ul>
   </div>
 
-		<div class="col-md-10 ">
+    <div class="col-md-10 ">
       <div class="content">
-        <div class="inputbar">輸入學生姓名 :
-        <form action="#">
-          <input type="text" >
-          <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button>
-        </form>
-        </div>
-        <div>
-        <!--以下資料庫要有值才會顯示-->
-          <hr>
-          <caption class="top">同學1 補課紀錄 : </caption>
-          <table id="table" class="table table-striped">  
-            <caption><strong>未補課</strong></caption>
-            <tr>
-              <td>11/11 高三物理A</td>
-            </tr>
-             <tr>
-              <td>11/09 高三數學A</td>
-            </tr>
-          </table>
-          <table id="table" class="table table-striped">  
-            <caption><strong>已補課</strong></caption>
-            <tr>
-              <td>11/04 高三物理A</td>
-            </tr>
-            </tr>
-          </table>
-        </div>
+      <div>
+      <caption class="top">同學1 補課列表</caption>
+        <table id="table" class="table table-striped">
+          <form action="studentVideoWatch.html">
+          <tr>
+            <td><strong>11/11</strong></td>
+            <td><strong>高三物理A</strong></td>
+            <input type="hidden" name="videoLink" value="123">
+            <td><button type="submit" id="inputbtn"class="btn btn-default butn">補課</button></td>
+          </tr>
+          </form>
+          <form action="studentVideoWatch.html">
+          <tr>
+            <td><strong>11/08</strong></td>
+            <td><strong>高三數學A</strong></td>
+            <td><button type="submit" id="inputbtn"class="btn btn-default butn" >補課</button></td>
+          </tr>
+          </form>
+          <form action="studentVideoWatch.html">
+          <tr>
+            <td><strong>11/04</strong></td>
+            <td><strong>高三物理A</strong></td>
+            <td><button type="submit" id="inputbtn"class="btn btn-default butn">補課</button></td>
+          </tr>
+          </form>
+        </table>
+     </div>
       </div>
-		</div>
+    </div>
 
 </div>
 

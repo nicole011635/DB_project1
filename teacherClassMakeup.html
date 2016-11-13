@@ -47,9 +47,9 @@
 	  		</div>
         <nav class="navbar-right navbar-text navbar-hover" >
           <ul class="nav nav-pills">            
-          <li class="nav-tag"><a href="#">點名</a></li>
-          <li class="nav-tag"><a href="#profile">訊息</a></li>
-          <li class="nav-tag"><a href="#">管理</a></li>
+          <li class="nav-tag"><a href="teacherMain.html">點名</a></li>
+          <li class="nav-tag"><a href="teacherMessage.html">訊息</a></li>
+          <li class="nav-tag"><a href="teacherManageClass.html">管理</a></li>
         </ul>
         </nav>
       </div>
@@ -62,40 +62,24 @@
 
   <div class="col-md-2 " id="sidebar">
       <ul class="side">
-        <li><a href="#home">班級補課</a></li>
-        <li><a href="#news">學生補課</a></li>
-        <li><a href="#contact">聯絡簿</a></li>
+        <li><a href="teacherMessage.html">聯絡簿</a></li>
+        <li><a href="teacherClassMakeup.html">班級補課</a></li>
+        <li><a href="teacherStuMakeup.html">學生補課</a></li>
       </ul>
   </div>
 
 		<div class="col-md-10 ">
       <div class="content">
       <div class="inputbar">查詢班級 :
-        <select id="date">
-         <option>日期</option>
-         <option>文字敘述2</option>
-         <option>文字敘述3</option>
-         <option>文字敘述4</option>
-        </select>
-        <select id="grade">
-         <option>年級</option>
-         <option>文字敘述2</option>
-         <option>文字敘述3</option>
-         <option>文字敘述4</option>
-        </select>
-        <select id="subject">
-         <option>科目</option>
-         <option>文字敘述2</option>
-         <option>文字敘述3</option>
-         <option>文字敘述4</option>
-        </select>
+      <form action="#">
         <select id="class">
-         <option>班級</option>
+         <option>課程名稱</option>
          <option>文字敘述2</option>
          <option>文字敘述3</option>
          <option>文字敘述4</option>
         </select>
-        <button id="inputbtn"class="btn btn-default butn">確定</button>
+        <button type="submit" id="inputbtn"class="btn btn-default butn">確定</button>
+      </form>
       </div>
       <div>
       <!--以下要有值才會顯示-->
